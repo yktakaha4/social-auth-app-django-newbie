@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from os import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -108,9 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ja-jp"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Tokyo"
 
 USE_I18N = True
 
@@ -137,3 +138,20 @@ AUTHENTICATION_BACKENDS = (
     # 'social_core.backends.qiita.QiitaOAuth2',
     "django.contrib.auth.backends.ModelBackend",
 )
+
+SOCIAL_AUTH_URL_NAMESPACE = "social"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/"
+SOCIAL_AUTH_LOGIN_ERROR_URL = "/"
+
+SOCIAL_AUTH_GITHUB_KEY = environ["SOCIAL_AUTH_GITHUB_KEY"]
+SOCIAL_AUTH_GITHUB_SECRET = environ["SOCIAL_AUTH_GITHUB_SECRET"]
+
+# SOCIAL_AUTH_TWITTER_KEY = None
+# SOCIAL_AUTH_TWITTER_SECRET = None
+
+# SOCIAL_AUTH_QIITA_KEY = None
+# SOCIAL_AUTH_QIITA_SECRET = None
+# SOCIAL_AUTH_QIITA_SCOPE = ['read_qiita']
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
