@@ -42,3 +42,11 @@ callback: `http://localhost:8000/social/complete/qiita/`
 ### バックエンド実装がどこにあるか
 
 https://github.com/python-social-auth/social-core/tree/master/social_core/backends
+
+### クエリパラメータの違い
+
+GitHub: `?code=aaaaa&state=bbbbb`
+
+Twitter: `?redirect_state=aaaaa&oauth_token=bbbbb&oauth_verifier=ccccc`
+
+Qiita: `?code=aaaaa&state=bbbbb`
