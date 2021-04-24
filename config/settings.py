@@ -130,8 +130,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # python-social-auth
 # https://python-social-auth.readthedocs.io/en/latest/configuration/django.html
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.github.GithubOAuth2',
+    "social_core.backends.github.GithubOAuth2",
     # 'social_core.backends.twitter.TwitterOAuth',
     # 'social_core.backends.qiita.QiitaOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
+    "django.contrib.auth.backends.ModelBackend",
 )
