@@ -36,3 +36,9 @@ callback: `http://localhost:8000/social/complete/twitter/`
 https://qiita.com/settings/applications
 
 callback: `http://localhost:8000/social/complete/qiita/`
+
+## memo
+
+### バックエンド実装がどこにあるか
+
+https://github.com/python-social-auth/social-core/tree/master/social_core/backends
