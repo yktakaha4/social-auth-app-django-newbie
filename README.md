@@ -19,8 +19,14 @@ $ make dev
 
 ## oauth settings
 
-コールバック URL は `http://localhost:8000/social/complete/xxxxx` の形式で設定する
-
 ### github
 
-https://github.com/settings/applications/new
+https://github.com/settings/developers
+
+callback: `http://localhost:8000/social/complete/github/`
+
+### twitter
+
+https://developer.twitter.com/en/portal/projects-and-apps
+
+callback: `http://localhost:8000/social/complete/twitter/`

@@ -134,7 +134,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # https://python-social-auth.readthedocs.io/en/latest/configuration/django.html
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.github.GithubOAuth2",
-    # 'social_core.backends.twitter.TwitterOAuth',
+    "social_core.backends.twitter.TwitterOAuth",
     # 'social_core.backends.qiita.QiitaOAuth2',
     "django.contrib.auth.backends.ModelBackend",
 )
@@ -146,8 +146,8 @@ SOCIAL_AUTH_LOGIN_ERROR_URL = "/"
 SOCIAL_AUTH_GITHUB_KEY = environ["SOCIAL_AUTH_GITHUB_KEY"]
 SOCIAL_AUTH_GITHUB_SECRET = environ["SOCIAL_AUTH_GITHUB_SECRET"]
 
-# SOCIAL_AUTH_TWITTER_KEY = None
-# SOCIAL_AUTH_TWITTER_SECRET = None
+SOCIAL_AUTH_TWITTER_KEY = environ["SOCIAL_AUTH_TWITTER_KEY"]
+SOCIAL_AUTH_TWITTER_SECRET = environ["SOCIAL_AUTH_TWITTER_SECRET"]
 
 # SOCIAL_AUTH_QIITA_KEY = None
 # SOCIAL_AUTH_QIITA_SECRET = None

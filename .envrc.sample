@@ -1,2 +1,7 @@
+# Client ID & Secrets
 export SOCIAL_AUTH_GITHUB_KEY=
 export SOCIAL_AUTH_GITHUB_SECRET=
+
+# Consumer keys
+export SOCIAL_AUTH_TWITTER_KEY=
+export SOCIAL_AUTH_TWITTER_SECRET=
