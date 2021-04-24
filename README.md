@@ -43,6 +43,10 @@ callback: `http://localhost:8000/social/complete/qiita/`
 
 https://github.com/python-social-auth/social-core/tree/master/social_core/backends
 
+### ストラテジ実装がどこにあるか
+
+https://github.com/python-social-auth/social-app-django/blob/master/social_django/strategy.py
+
 ### クエリパラメータの違い
 
 GitHub: `?code=aaaaa&state=bbbbb`
