@@ -4,6 +4,10 @@
 install:
 	poetry install
 
+.PHONY: makemigrations
+makemigrations:
+	poetry run ./manage.py makemigrations
+
 .PHONY: migrate
 migrate:
 	poetry run ./manage.py migrate
