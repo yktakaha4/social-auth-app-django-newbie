@@ -16,5 +16,9 @@ runserver:
 shell:
 	poetry run ./manage.py shell_plus
 
+.POHNY: format
+format:
+	poetry run black .
+
 .PHONY: dev
 dev: migrate runserver
