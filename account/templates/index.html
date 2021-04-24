@@ -3,8 +3,9 @@
 <h2>Menu</h2>
 
 <div>
-  <a href="{% url 'social:begin' 'github' %}">Login(GitHub)</a>
-  <a href="{% url 'social:begin' 'twitter' %}">Login(Twitter)</a>
+  <a href="{% url 'social:begin' 'github' %}">Login(GitHub)</a> /
+  <a href="{% url 'social:begin' 'twitter' %}">Login(Twitter)</a> /
+  <a href="{% url 'social:begin' 'qiita' %}">Login(Qiita)</a>
 </div>
 <div>
   <a href="{% url 'logout' %}">Logout</a>

@@ -135,7 +135,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTHENTICATION_BACKENDS = (
     "social_core.backends.github.GithubOAuth2",
     "social_core.backends.twitter.TwitterOAuth",
-    # 'social_core.backends.qiita.QiitaOAuth2',
+    "social_core.backends.qiita.QiitaOAuth2",
     "django.contrib.auth.backends.ModelBackend",
 )
 
@@ -149,9 +149,9 @@ SOCIAL_AUTH_GITHUB_SECRET = environ["SOCIAL_AUTH_GITHUB_SECRET"]
 SOCIAL_AUTH_TWITTER_KEY = environ["SOCIAL_AUTH_TWITTER_KEY"]
 SOCIAL_AUTH_TWITTER_SECRET = environ["SOCIAL_AUTH_TWITTER_SECRET"]
 
-# SOCIAL_AUTH_QIITA_KEY = None
-# SOCIAL_AUTH_QIITA_SECRET = None
-# SOCIAL_AUTH_QIITA_SCOPE = ['read_qiita']
+SOCIAL_AUTH_QIITA_KEY = environ["SOCIAL_AUTH_QIITA_KEY"]
+SOCIAL_AUTH_QIITA_SECRET = environ["SOCIAL_AUTH_QIITA_SECRET"]
+SOCIAL_AUTH_QIITA_SCOPE = ["read_qiita"]
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"

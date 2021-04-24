@@ -30,3 +30,9 @@ callback: `http://localhost:8000/social/complete/github/`
 https://developer.twitter.com/en/portal/projects-and-apps
 
 callback: `http://localhost:8000/social/complete/twitter/`
+
+### qiita
+
+https://qiita.com/settings/applications
+
+callback: `http://localhost:8000/social/complete/qiita/`
