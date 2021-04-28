@@ -9,3 +9,7 @@ export SOCIAL_AUTH_TWITTER_SECRET=
 # Client ID & Secret
 export SOCIAL_AUTH_QIITA_KEY=
 export SOCIAL_AUTH_QIITA_SECRET=
+
+# DEBUG=Falseでないとミドルウェアが機能しない
+export DEBUG=False
+export ALLOWED_HOSTS=localhost

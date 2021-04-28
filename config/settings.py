@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from os import environ
 from pathlib import Path
+from distutils.util import strtobool
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-79eusw2+5fptyqo=airwd#y958cm_u#r+cd350rwpgmd+13gsv"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = strtobool(environ.get("DEBUG", True))
+ALLOWED_HOSTS = environ.get("ALLOWED_HOSTS", "").split(",")
 
 
 # Application definition
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "config.middleware.CustomizedSocialAuthExceptionMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -137,19 +139,6 @@ AUTHENTICATION_BACKENDS = (
     "social_core.backends.twitter.TwitterOAuth",
     "social_core.backends.qiita.QiitaOAuth2",
     "django.contrib.auth.backends.ModelBackend",
-)
-
-SOCIAL_AUTH_PIPELINE = (
-    "social_core.pipeline.social_auth.social_details",
-    "social_core.pipeline.social_auth.social_uid",
-    "social_core.pipeline.social_auth.auth_allowed",
-    "social_core.pipeline.social_auth.social_user",
-    "social_core.pipeline.user.get_username",
-    "social_core.pipeline.social_auth.associate_by_email",  # <--- enable this one
-    "social_core.pipeline.user.create_user",
-    "social_core.pipeline.social_auth.associate_user",
-    "social_core.pipeline.social_auth.load_extra_data",
-    "social_core.pipeline.user.user_details",
 )
 
 SOCIAL_AUTH_URL_NAMESPACE = "social"

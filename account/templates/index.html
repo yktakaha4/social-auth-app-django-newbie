@@ -13,6 +13,10 @@
 
 <hr />
 
+{% if error_message %}
+<div style="color: red">{{ error_message }}</div>
+{% endif %}
+
 <h2>AuthUser</h2>
 
 <table border="1">
