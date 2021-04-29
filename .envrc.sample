@@ -12,4 +12,4 @@ export SOCIAL_AUTH_QIITA_SECRET=
 
 # DEBUG=Falseでないとミドルウェアが機能しない
 export DEBUG=False
-export ALLOWED_HOSTS=localhost
+export ALLOWED_HOSTS=*
